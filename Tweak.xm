@@ -412,3 +412,102 @@ BYPASS BLOCKED CHANNELS/GROUPS/CHATS (Telexplicit)
 	return 0;
 } 
 %end
+
+/*
+ALL VERIFIED
+*/
+
+%hook TGDialogListCell
+- (void)setIsVerified:(bool)arg1 {
+	arg1 = 1;
+	%orig;
+} 
+%end
+
+%hook TGDialogListCell
+- (bool)isVerified {
+	return 1;
+} 
+%end
+
+%hook TGDialogListTextView
+- (void)setIsVerified:(bool)arg1 {
+	%orig;
+} 
+%end
+
+%hook TGDialogListTextView
+- (bool)isVerified {
+	return 1;
+} 
+%end
+
+%hook TGDialogListSearchCell
+- (void)setIsVerified:(bool)arg1 {
+	arg1 = 1;
+	%orig;
+} 
+%end
+
+%hook TGDialogListSearchCell
+- (bool)isVerified {
+	return 1;
+} 
+%end
+
+%hook TGBridgeChat
+- (bool)isVerified {
+	return 1;
+} 
+%end
+
+%hook TGGroupInfoCollectionItemView
+- (bool)isVerified {
+	return 1;
+} 
+%end
+
+%hook TGUser
+- (bool)isVerified {
+	return 1;
+} 
+%end
+
+%hook TGUser
+- (void)setIsVerified:(bool)arg1 {
+	arg1 = 1;
+	%orig;
+} 
+%end
+
+%hook TGConversation
+- (bool)isVerified {
+	return 1;
+} 
+%end
+
+%hook TGConversation
+- (void)setIsVerified:(bool)arg1 {
+	arg1 = 1;
+	%orig;
+} 
+%end
+
+%hook TGBridgeUser
+- (bool)isVerified {
+	return 1;
+} 
+%end
+
+%hook TGUserInfoCollectionItemView
+- (void)setIsVerified:(bool)arg1 {
+	arg1 = 1;
+	%orig;
+} 
+%end
+
+%hook TGUserInfoCollectionItemView
+- (bool)isVerified {
+	return 1;
+} 
+%end
