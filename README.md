@@ -26,3 +26,5 @@ What it's missing to be completed:
 -Preference bundle
 
 I need help to make it. 
+
+Note: debs are not always updated
