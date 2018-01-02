@@ -15,6 +15,7 @@ What it can do right now:
 -Hide typing indicator
 -Hide messages bubbles (may break "reply" functionality in older telegram versions)
 -Customize the tab bar
+-All verified
 
 Features that can/will be added:
 -Eclipse/NightMode support
