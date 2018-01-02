@@ -382,3 +382,33 @@ CUSTOM TAB BAR
 	return %orig;
 } 
 %end
+
+/*
+BYPASS BLOCKED CHANNELS/GROUPS/CHATS (Telexplicit) 
+*/
+
+%hook TGConversation
+- (void)setHasExplicitContent:(bool)arg1 {
+	arg1 = 0;
+	%orig;
+} 
+%end
+
+%hook TGConversation
+- (bool)hasExplicitContent {
+	return 0;
+} 
+%end
+
+%hook TGUser
+- (void)setHasExplicitContent:(bool)arg1 {
+	arg1 = 0;
+	%orig;
+} 
+%end
+
+%hook TGUser
+- (bool)hasExplicitContent {
+	return 0;
+} 
+%end
